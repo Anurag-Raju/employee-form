@@ -1,0 +1,21 @@
+.empform {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0px;
+  width: 320px;
+  height: 100%;
+  margin-left: 1rem;
+}
+.empgrid {
+  padding-left: 350px;
+  width: 70%;
+}
+
+.remove {
+  float: right;
+}
+.form {
+  width: 80%;
+  margin: 8px;
+}
