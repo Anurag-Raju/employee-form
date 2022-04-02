@@ -161,7 +161,9 @@ const Employeeform = () => {
     }
     return value;
   };
-
+  const printPreview = () => {
+    window.print();
+  };
   return (
     <div>
       <Card>
@@ -230,9 +232,18 @@ const Employeeform = () => {
                 />
                 <hr />
                 {toggleSubmit ? (
-                  <Button type="submit" variant="contained">
-                    Register
-                  </Button>
+                  <>
+                    <Button type="submit" variant="contained">
+                      Register
+                    </Button>
+                    <Button
+                      type="submit"
+                      variant="contained"
+                      onClick={printPreview}
+                    >
+                      print
+                    </Button>
+                  </>
                 ) : (
                   <Button type="submit" variant="contained">
                     Edit
