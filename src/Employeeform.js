@@ -162,7 +162,11 @@ const Employeeform = () => {
     return value;
   };
   const printPreview = () => {
-    window.print();
+    try {
+      document.execCommand("print", false, null);
+    } catch (e) {
+      window.print();
+    }
   };
   return (
     <div>
@@ -263,7 +267,7 @@ const Employeeform = () => {
           }}
         />
         <TableContainer>
-          <Table>
+          <Table style={{ tableLayout: "fixed" }}>
             <TableHead>
               <TableRow>
                 <TableCell></TableCell>
