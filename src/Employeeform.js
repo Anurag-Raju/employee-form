@@ -240,13 +240,12 @@ const Employeeform = () => {
                     <Button type="submit" variant="contained">
                       Register
                     </Button>
-                    <Button
-                      type="submit"
-                      variant="contained"
-                      onClick={printPreview}
-                    >
-                      print
-                    </Button>
+                    <br />
+                    <div style={{ margin: "10px 0 " }}>
+                      <Button variant="contained" onClick={printPreview}>
+                        print
+                      </Button>
+                    </div>
                   </>
                 ) : (
                   <Button type="submit" variant="contained">
