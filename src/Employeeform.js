@@ -162,11 +162,10 @@ const Employeeform = () => {
     return value;
   };
   const printPreview = () => {
-    window.print();
     try {
-      window.document.queryCommandSupported("print");
+      navigator.clipboard("print", false, null);
     } catch {
-      window.print();
+      window.frames.print();
     }
   };
   return (
