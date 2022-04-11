@@ -162,20 +162,19 @@ const Employeeform = () => {
     return value;
   };
   const [isPrintClicked, setisPrintClicked] = useState(false);
+
   const printPreview = () => {
     // try {
     //   document.execCommand("print", false, null);
     // } catch {
 
     // }
+
     setisPrintClicked(true);
-    setTimeout(
-      function () {
-        window.print();
-      }.bind(this),
-      1000
-    );
+
+    setTimeout(window.print, 1000);
   };
+
   return (
     <div>
       <Card>
