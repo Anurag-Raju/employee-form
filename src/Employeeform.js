@@ -162,11 +162,14 @@ const Employeeform = () => {
     return value;
   };
   const printPreview = () => {
-    try {
-      navigator.clipboard("print", false, null);
-    } catch {
-      window.frames.print();
-    }
+    // try {
+    //   document.execCommand("print", false, null);
+    // } catch {
+
+    // }
+    setTimeout(() => {
+      window.print();
+    }, 1000);
   };
   return (
     <div>
