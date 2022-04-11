@@ -161,12 +161,14 @@ const Employeeform = () => {
     }
     return value;
   };
+  const [isPrintClicked, setisPrintClicked] = useState(false);
   const printPreview = () => {
     // try {
     //   document.execCommand("print", false, null);
     // } catch {
 
     // }
+    setisPrintClicked(true);
     setTimeout(() => {
       window.print();
     }, 1000);
@@ -258,6 +260,7 @@ const Employeeform = () => {
               </Grid>
             </Grid>
           </form>
+          {isPrintClicked && <p>print</p>}
         </div>
       </Card>
       <div className="empgrid">
