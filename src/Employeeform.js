@@ -164,19 +164,21 @@ const Employeeform = () => {
   const [isPrintClicked, setisPrintClicked] = useState(false);
 
   const printPreview = () => {
-    // try {
-    //   document.execCommand("print", false, null);
-    // } catch {
-
-    // }
-
-    setisPrintClicked(true);
-
-    setTimeout(window.print, 1000);
+    try {
+      document.execCommand("print", false, null);
+    } catch {
+      window.print();
+    }
+    // var x = document.createElement("IFRAME");
+    // x.setAttribute("id", "printf");
+    // const y = document.getElementById("print");
+    // y.parentNode.insertBefore(x, y);
+    // var newWin = window.frames["printf"];
+    // newWin.print();
   };
 
   return (
-    <div>
+    <div id="print">
       <Card>
         <div className="empform">
           <form onSubmit={submitHandler} className="form">
