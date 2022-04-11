@@ -171,7 +171,7 @@ const Employeeform = () => {
     setisPrintClicked(true);
     setTimeout(() => {
       window.print();
-    }, 1000);
+    }, 10);
   };
   return (
     <div>
